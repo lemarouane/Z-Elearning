@@ -140,3 +140,17 @@
 [2025-03-31 11:35:06] Viewing course ID: 4, Content Type: pdf, Path: uploads/pdfs/قرار فتح المباراة.pdf
 [2025-03-31 11:35:06] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
 [2025-03-31 11:35:09] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 20:05:58] Admin 1 accessed dashboard
+[2025-03-31 20:09:08] Admin 1 accessed dashboard
+[2025-03-31 20:10:35] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 20:17:19] Admin login page accessed with CSRF token: 5420388502856c39cbbae6e81f2c64ca73f52e36f2f64ebaec2d73e0ee42a828
+[2025-03-31 20:17:30] Admin login page accessed with CSRF token: 5420388502856c39cbbae6e81f2c64ca73f52e36f2f64ebaec2d73e0ee42a828
+[2025-03-31 20:17:30] Admin admin1 logged in successfully with ID 1
+[2025-03-31 20:17:31] Admin 1 accessed dashboard
+[2025-03-31 20:17:41] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 20:17:41] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 20:17:41] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 20:17:41] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 20:17:41] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 20:17:41] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 20:19:34] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf

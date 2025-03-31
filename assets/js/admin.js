@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    // DataTables Initialization
+    // DataTables Initialization (if still used elsewhere)
     $('.display').DataTable({
         pageLength: 5,
         lengthChange: false,
@@ -32,6 +32,14 @@ $(document).ready(function() {
         function() { $(this).css('transform', 'scale(1)'); }
     );
 
+    // Course card click redirection
+    $('.course-card').on('click', function(e) {
+        if (!$(e.target).closest('.course-actions').length) {
+            const courseId = $(this).data('id');
+            window.location.href = 'view_course.php?id=' + courseId;
+        }
+    });
+
     // Debug embedded content loading
     $('.embedded-pdf').on('load', function() {
         console.log('PDF iframe loaded');
@@ -63,7 +71,7 @@ $(document).ready(function() {
         return false;
     });
 
-    // Inject script into iframe to block print/save (best effort)
+    // Inject script into iframe to block print/save
     $('.embedded-pdf').each(function() {
         const iframe = this;
         const script = `

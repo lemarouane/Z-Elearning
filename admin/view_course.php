@@ -8,7 +8,7 @@ if (!$course_id) {
     exit();
 }
 
-$course = $conn->query("SELECT c.title, c.content_type, c.content_path, c.image_path, c.created_at, s.name AS subject, l.name AS level 
+$course = $conn->query("SELECT c.title, c.content_type, c.content_path, c.created_at, s.name AS subject, l.name AS level 
                         FROM courses c 
                         JOIN subjects s ON c.subject_id = s.id 
                         JOIN levels l ON c.level_id = l.id 
@@ -18,10 +18,6 @@ if (!$course) {
     exit();
 }
 
-// Debug logging
-log_error("Viewing course ID: $course_id, Content Type: {$course['content_type']}, Path: {$course['content_path']}");
-
-// Video embed logic
 $embed_url = '';
 if ($course['content_type'] === 'video') {
     if (preg_match('/(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/', $course['content_path'], $match)) {
@@ -68,14 +64,8 @@ if ($course['content_type'] === 'video') {
                         </div>
                     <?php endif; ?>
                 </div>
-                <div class="course-sidebar">
-                    <div class="course-image">
-                        <img src="../<?php echo htmlspecialchars($course['image_path']); ?>" alt="Course Image">
-                    </div>
-                    <div class="course-actions">
-                        <a href="manage_courses.php" class="btn-action"><i class="fas fa-arrow-left"></i> Back to Courses</a>
-                        <a href="edit_course.php?id=<?php echo $course_id; ?>" class="btn-action edit"><i class="fas fa-edit"></i> Edit Course</a>
-                    </div>
+                <div class="course-actions">
+                    <a href="manage_courses.php" class="btn-action"><i class="fas fa-arrow-left"></i> Back to Courses</a>
                 </div>
             </div>
         </div>
