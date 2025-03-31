@@ -1,0 +1,48 @@
+[2025-03-31 04:27:46] Failed login attempt for username: admin1 - Invalid password.
+[2025-03-31 04:37:35] CSRF token mismatch on admin login attempt.
+[2025-03-31 04:37:41] CSRF token mismatch on admin login attempt.
+[2025-03-31 04:38:21] CSRF token mismatch on admin login attempt.
+[2025-03-31 04:38:27] CSRF token mismatch on admin login attempt.
+[2025-03-31 04:38:48] CSRF token mismatch on admin login attempt.
+[2025-03-31 04:38:53] CSRF token mismatch on admin login attempt.
+[2025-03-31 04:46:36] CSRF token mismatch on admin login attempt.
+[2025-03-31 04:46:43] CSRF token mismatch on admin login attempt.
+[2025-03-31 04:47:02] CSRF token mismatch on admin login attempt.
+[2025-03-31 04:49:19] Admin 1 accessed dashboard
+[2025-03-31 04:49:33] Admin 1 accessed dashboard
+[2025-03-31 04:49:35] Admin 1 accessed dashboard
+[2025-03-31 04:49:36] Admin 1 accessed dashboard
+[2025-03-31 04:49:39] Admin 1 accessed dashboard
+[2025-03-31 04:49:54] Admin 1 accessed dashboard
+[2025-03-31 04:52:08] Admin login page accessed with CSRF token: ed5c80bea92affd6cad9971e4c77c10331779efdc3137d51b5eea966d75c5d79
+[2025-03-31 04:52:14] Admin login page accessed with CSRF token: ed5c80bea92affd6cad9971e4c77c10331779efdc3137d51b5eea966d75c5d79
+[2025-03-31 04:52:14] Admin admin1 logged in successfully with ID 1
+[2025-03-31 04:52:14] Admin 1 accessed dashboard
+[2025-03-31 04:52:31] Admin 1 accessed dashboard
+[2025-03-31 04:52:31] Admin 1 accessed dashboard
+[2025-03-31 04:52:45] Admin 1 accessed dashboard
+[2025-03-31 04:53:02] Admin 1 accessed dashboard
+[2025-03-31 04:53:06] Admin 1 accessed dashboard
+[2025-03-31 04:58:23] Admin 1 accessed dashboard
+[2025-03-31 05:00:27] Admin 1 accessed dashboard
+[2025-03-31 05:00:45] Admin 1 accessed dashboard
+[2025-03-31 05:05:29] Admin 1 accessed dashboard
+[2025-03-31 05:05:35] Admin 1 accessed dashboard
+[2025-03-31 05:07:44] Admin 1 accessed dashboard
+[2025-03-31 05:10:48] Admin 1 accessed dashboard
+[2025-03-31 05:11:28] Admin 1 accessed dashboard
+[2025-03-31 05:16:15] Admin 1 accessed dashboard
+[2025-03-31 05:20:52] Admin 1 accessed dashboard
+[2025-03-31 05:30:14] Admin 1 accessed dashboard
+[2025-03-31 05:31:39] Admin 1 accessed dashboard
+[2025-03-31 05:32:23] Admin login page accessed with CSRF token: 33760e363552541e45c96798bfaa869183d12c344a5fafe0510e751ec9948786
+[2025-03-31 05:32:24] Admin login page accessed with CSRF token: 33760e363552541e45c96798bfaa869183d12c344a5fafe0510e751ec9948786
+[2025-03-31 05:32:24] Admin admin1 logged in successfully with ID 1
+[2025-03-31 05:32:24] Admin 1 accessed dashboard
+[2025-03-31 05:36:37] Admin 1 accessed dashboard
+[2025-03-31 05:36:57] Admin 1 accessed dashboard
+[2025-03-31 05:37:00] Admin login page accessed with CSRF token: 06d14c6fc9a4bd74ca49c5858c80ffa142bcbd14492b8fb518403f5f84ffc6b2
+[2025-03-31 05:37:02] Admin login page accessed with CSRF token: 06d14c6fc9a4bd74ca49c5858c80ffa142bcbd14492b8fb518403f5f84ffc6b2
+[2025-03-31 05:37:02] Admin admin1 logged in successfully with ID 1
+[2025-03-31 05:37:02] Admin 1 accessed dashboard
+[2025-03-31 05:38:59] Admin 1 accessed dashboard
