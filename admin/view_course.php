@@ -18,12 +18,19 @@ if (!$course) {
     exit();
 }
 
-// Convert YouTube URL to embed format if applicable
-$embed_url = $course['content_type'] === 'video' ? preg_replace(
-    "/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/", 
-    "https://www.youtube.com/embed/$1?controls=0&rel=0&modestbranding=1", 
-    $course['content_path']
-) : '';
+// Debug logging
+log_error("Viewing course ID: $course_id, Content Type: {$course['content_type']}, Path: {$course['content_path']}");
+
+// Video embed logic
+$embed_url = '';
+if ($course['content_type'] === 'video') {
+    if (preg_match('/(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/', $course['content_path'], $match)) {
+        $embed_url = "https://www.youtube.com/embed/{$match[1]}?controls=0&rel=0&modestbranding=1&autoplay=0";
+    } else {
+        $embed_url = $course['content_path'];
+        log_error("Video URL not recognized as YouTube: {$course['content_path']}");
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -47,10 +54,17 @@ $embed_url = $course['content_type'] === 'video' ? preg_replace(
             <div class="course-content">
                 <div class="content-preview">
                     <?php if ($course['content_type'] === 'pdf'): ?>
-                        <iframe src="stream_pdf.php?file=<?php echo urlencode($course['content_path']); ?>" class="embedded-pdf" frameborder="0"></iframe>
+                        <div class="pdf-wrapper">
+                            <iframe src="stream_pdf.php?file=<?php echo urlencode($course['content_path']); ?>#toolbar=0&navpanes=0&scrollbar=1" class="embedded-pdf" frameborder="0"></iframe>
+                            <div class="pdf-overlay"></div>
+                        </div>
                     <?php elseif ($course['content_type'] === 'video'): ?>
                         <div class="video-wrapper">
-                            <iframe src="<?php echo htmlspecialchars($embed_url); ?>" class="embedded-video" frameborder="0" allowfullscreen></iframe>
+                            <?php if ($embed_url): ?>
+                                <iframe src="<?php echo htmlspecialchars($embed_url); ?>" class="embedded-video" frameborder="0" allowfullscreen></iframe>
+                            <?php else: ?>
+                                <p class="error">Invalid video URL: <?php echo htmlspecialchars($course['content_path']); ?></p>
+                            <?php endif; ?>
                         </div>
                     <?php endif; ?>
                 </div>

@@ -52,3 +52,91 @@
 [2025-03-31 05:48:52] Admin 1 accessed dashboard
 [2025-03-31 05:49:00] Admin 1 accessed dashboard
 [2025-03-31 05:50:24] Admin 1 accessed dashboard
+[2025-03-31 10:16:27] Admin 1 accessed dashboard
+[2025-03-31 10:16:28] Admin 1 accessed dashboard
+[2025-03-31 10:16:33] Viewing course ID: 4, Content Type: pdf, Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 10:16:33] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 10:16:33] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 10:16:33] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 10:16:33] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 10:16:33] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 10:16:33] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 10:16:33] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 10:16:46] Viewing course ID: 4, Content Type: pdf, Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 10:16:46] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 10:16:50] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 10:16:50] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 10:16:50] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 10:16:50] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 10:16:50] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 10:16:50] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 10:16:55] Viewing course ID: 4, Content Type: pdf, Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 10:16:55] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 10:44:59] Viewing course ID: 4, Content Type: pdf, Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 10:47:09] Viewing course ID: 4, Content Type: pdf, Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 10:47:13] Viewing course ID: 4, Content Type: pdf, Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 10:54:01] Viewing course ID: 4, Content Type: pdf, Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 10:54:03] Viewing course ID: 4, Content Type: pdf, Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 10:56:01] Viewing course ID: 4, Content Type: pdf, Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 10:56:29] Viewing course ID: 4, Content Type: pdf, Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:06:56] Viewing course ID: 4, Content Type: pdf, Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:10:23] Viewing course ID: 4, Content Type: pdf, Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:10:24] Viewing course ID: 4, Content Type: pdf, Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:14:20] Viewing course ID: 4, Content Type: pdf, Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:14:21] Viewing course ID: 4, Content Type: pdf, Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:16:22] Viewing course ID: 4, Content Type: pdf, Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:16:23] Viewing course ID: 4, Content Type: pdf, Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:17:10] Viewing course ID: 4, Content Type: pdf, Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:17:11] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:25:24] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:25:24] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:25:24] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:25:24] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:25:24] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:25:24] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:25:24] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:27:44] Admin login page accessed with CSRF token: cd71c0b736d21edede51fc2b95958a38491831587fb7389540cd51bd95a12f53
+[2025-03-31 11:27:52] Admin login page accessed with CSRF token: cd71c0b736d21edede51fc2b95958a38491831587fb7389540cd51bd95a12f53
+[2025-03-31 11:27:52] Admin admin1 logged in successfully with ID 1
+[2025-03-31 11:27:52] Admin 1 accessed dashboard
+[2025-03-31 11:28:00] Viewing course ID: 4, Content Type: pdf, Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:28:00] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:28:01] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:28:01] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:28:01] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:28:01] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:28:01] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:28:01] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:29:43] Viewing course ID: 4, Content Type: pdf, Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:29:43] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:29:43] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:29:43] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:29:43] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:29:43] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:29:43] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:29:43] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:29:47] Viewing course ID: 4, Content Type: pdf, Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:29:47] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:29:47] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:29:47] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:29:47] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:29:47] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:29:47] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:29:47] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:29:55] Viewing course ID: 4, Content Type: pdf, Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:29:55] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:30:04] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:30:13] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:30:14] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:30:14] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:30:14] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:30:14] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:30:14] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:30:14] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:33:56] Viewing course ID: 4, Content Type: pdf, Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:33:56] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:34:09] Viewing course ID: 4, Content Type: pdf, Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:34:09] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:35:06] Viewing course ID: 4, Content Type: pdf, Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:35:06] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-03-31 11:35:09] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
