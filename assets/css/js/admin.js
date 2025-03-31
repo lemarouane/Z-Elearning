@@ -20,7 +20,7 @@ $(document).ready(function() {
         dom: '<"top"f>rt<"bottom"ip><"clear">'
     });
 
-    // Sidebar hover tooltip (for mobile collapse)
+    // Sidebar hover tooltip
     $('.sidebar-nav a').each(function() {
         const text = $(this).text().trim();
         if (text) $(this).attr('title', text);
@@ -31,6 +31,13 @@ $(document).ready(function() {
         function() { $(this).css('transform', 'scale(1.05)'); },
         function() { $(this).css('transform', 'scale(1)'); }
     );
+
+    // Disable interactions on embedded content
+    $('.embedded-pdf, .embedded-video').on('contextmenu', function(e) {
+        e.preventDefault();
+    }).on('keydown', function(e) {
+        if (e.ctrlKey || e.key === 's' || e.key === 'p') e.preventDefault();
+    });
 
     // Modal close on Esc key
     $(document).keydown(function(e) {

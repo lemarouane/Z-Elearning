@@ -35,15 +35,15 @@ $courses_result = $conn->query("SELECT c.id, c.title, l.name AS level
 <body>
     <?php include '../includes/header.php'; ?>
     <main class="dashboard">
-        <h1>View Student: <?php echo htmlspecialchars($student['name']); ?></h1>
-        <section class="details">
-            <p><strong>Email:</strong> <?php echo htmlspecialchars($student['email']); ?></p>
-            <p><strong>Phone:</strong> <?php echo htmlspecialchars($student['phone']); ?></p>
-            <p><strong>Validated:</strong> <?php echo $student['is_validated'] ? 'Yes' : 'No'; ?></p>
-            <p><strong>Registered:</strong> <?php echo $student['created_at']; ?></p>
-        </section>
-        <section class="tables">
-            <div class="table-container">
+        <div class="student-view-container">
+            <h1><?php echo htmlspecialchars($student['name']); ?></h1>
+            <div class="student-meta">
+                <span class="meta-item"><i class="fas fa-envelope"></i> <?php echo htmlspecialchars($student['email']); ?></span>
+                <span class="meta-item"><i class="fas fa-phone"></i> <?php echo htmlspecialchars($student['phone']); ?></span>
+                <span class="meta-item"><i class="fas fa-check-circle"></i> <?php echo $student['is_validated'] ? 'Validated' : 'Pending'; ?></span>
+                <span class="meta-item"><i class="fas fa-calendar-alt"></i> <?php echo $student['created_at']; ?></span>
+            </div>
+            <div class="student-courses">
                 <h2>Assigned Courses</h2>
                 <table id="coursesTable" class="display">
                     <thead>
@@ -60,9 +60,11 @@ $courses_result = $conn->query("SELECT c.id, c.title, l.name AS level
                     </tbody>
                 </table>
             </div>
-        </section>
-        <a href="manage_students.php" class="btn-action">Back to Students</a>
-        <a href="edit_student.php?id=<?php echo $student_id; ?>" class="btn-action edit"><i class="fas fa-edit"></i> Edit</a>
+            <div class="student-actions">
+                <a href="manage_students.php" class="btn-action"><i class="fas fa-arrow-left"></i> Back to Students</a>
+                <a href="edit_student.php?id=<?php echo $student_id; ?>" class="btn-action edit"><i class="fas fa-edit"></i> Edit Student</a>
+            </div>
+        </div>
     </main>
     <?php include '../includes/footer.php'; ?>
     <script>
