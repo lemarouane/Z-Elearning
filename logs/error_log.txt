@@ -230,3 +230,4 @@
 [2025-04-01 13:21:00] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
 [2025-04-01 13:21:32] Admin 1 accessed dashboard
 [2025-04-01 13:25:17] L'administrateur 1 a accédé au tableau de bord
+[2025-04-01 13:31:04] L'administrateur 1 a accédé au tableau de bord

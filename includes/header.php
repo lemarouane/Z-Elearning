@@ -5,7 +5,7 @@ $role = isset($_SESSION['admin_id']) ? 'admin' : (isset($_SESSION['student_id'])
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,21 +21,21 @@ $role = isset($_SESSION['admin_id']) ? 'admin' : (isset($_SESSION['student_id'])
         <nav class="sidebar-nav">
             <ul>
                 <?php if ($role === 'admin'): ?>
-                    <li><a href="../admin/dashboard.php"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a></li>
-                    <li><a href="../admin/manage_students.php"><i class="fas fa-users"></i> <span>Manage Students</span></a></li>
-                    <li><a href="../admin/manage_courses.php"><i class="fas fa-book"></i> <span>Manage Courses</span></a></li>
-                    <li><a href="../admin/add_course.php"><i class="fas fa-plus-circle"></i> <span>Add Course</span></a></li>
-                    <li><a href="../admin/activity_logs.php"><i class="fas fa-history"></i> <span>Activity Logs</span></a></li>
-                    <li><a href="../logout.php"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a></li>
+                    <li><a href="../admin/dashboard.php"><i class="fas fa-tachometer-alt"></i> <span>Tableau de bord</span></a></li>
+                    <li><a href="../admin/manage_students.php"><i class="fas fa-users"></i> <span>Gérer les étudiants</span></a></li>
+                    <li><a href="../admin/manage_courses.php"><i class="fas fa-book"></i> <span>Gérer les cours</span></a></li>
+                    <li><a href="../admin/add_course.php"><i class="fas fa-plus-circle"></i> <span>Ajouter un cours</span></a></li>
+                    <li><a href="../admin/activity_logs.php"><i class="fas fa-history"></i> <span>Journal d'activités</span></a></li>
+                    <li><a href="../logout.php"><i class="fas fa-sign-out-alt"></i> <span>Déconnexion</span></a></li>
                 <?php elseif ($role === 'student'): ?>
-                    <li><a href="../student/view_course.php"><i class="fas fa-book-open"></i> <span>My Courses</span></a></li>
-                    <li><a href="../student/profile.php"><i class="fas fa-user"></i> <span>Profile</span></a></li>
-                    <li><a href="../student/quiz.php"><i class="fas fa-question-circle"></i> <span>Quizzes</span></a></li>
-                    <li><a href="../logout.php"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a></li>
+                    <li><a href="../student/view_course.php"><i class="fas fa-book-open"></i> <span>Mes cours</span></a></li>
+                    <li><a href="../student/profile.php"><i class="fas fa-user"></i> <span>Profil</span></a></li>
+                    <li><a href="../student/quiz.php"><i class="fas fa-question-circle"></i> <span>Quiz</span></a></li>
+                    <li><a href="../logout.php"><i class="fas fa-sign-out-alt"></i> <span>Déconnexion</span></a></li>
                 <?php else: ?>
-                    <li><a href="../admin/login.php"><i class="fas fa-user-shield"></i> <span>Admin Login</span></a></li>
-                    <li><a href="../student/login.php"><i class="fas fa-user"></i> <span>Student Login</span></a></li>
-                    <li><a href="../student/register.php"><i class="fas fa-user-plus"></i> <span>Register</span></a></li>
+                    <li><a href="../admin/login.php"><i class="fas fa-user-shield"></i> <span>Connexion administrateur</span></a></li>
+                    <li><a href="../student/login.php"><i class="fas fa-user"></i> <span>Connexion étudiant</span></a></li>
+                    <li><a href="../student/register.php"><i class="fas fa-user-plus"></i> <span>S'inscrire</span></a></li>
                 <?php endif; ?>
             </ul>
         </nav>
