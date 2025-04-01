@@ -41,62 +41,83 @@ $(document).ready(function() {
     });
 
     // Debug embedded content loading
-    $('.embedded-pdf').on('load', function() {
-        console.log('PDF iframe loaded');
-    }).on('error', function() {
-        alert('Failed to load PDF');
-    });
-
     $('.embedded-video').on('load', function() {
         console.log('Video iframe loaded');
     }).on('error', function() {
         alert('Failed to load video');
     });
 
-    // Block print/save actions globally
+    // Block print/save/download actions globally
     $(document).on('keydown', function(e) {
-        if (e.ctrlKey && (e.key === 'p' || e.key === 's') || e.key === 'PrintScreen') {
+        if (e.ctrlKey || e.metaKey) {
+            if (e.key === 'p' || e.key === 's' || e.key === 'Shift' || e.key === 'c') {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Blocked Ctrl+P/Ctrl+S/Ctrl+Shift/Ctrl+C');
+                alert('Copying, saving, and printing are restricted.');
+                return false;
+            }
+        }
+        if (e.key === 'PrintScreen') {
             e.preventDefault();
-            e.stopPropagation();
-            console.log('Blocked Ctrl+P/Ctrl+S/PrintScreen');
+            console.log('Blocked PrintScreen');
+            navigator.clipboard.writeText('').then(() => console.log('Clipboard cleared'));
+            $('.pdf-container').addClass('blurred');
+            setTimeout(() => $('.pdf-container').removeClass('blurred'), 1000); // Brief blur for PrintScreen
+            alert('Screenshots are restricted on this page.');
             return false;
         }
     });
 
-    // Block right-click on PDF and overlay
-    $('.pdf-wrapper, .embedded-pdf').on('contextmenu', function(e) {
+    // Block right-click globally
+    $(document).on('contextmenu', function(e) {
         e.preventDefault();
-        e.stopPropagation();
-        console.log('Blocked right-click on PDF');
+        console.log('Blocked right-click');
+        alert('Right-click is disabled to protect content.');
         return false;
     });
 
-    // Inject script into iframe to block print/save
-    $('.embedded-pdf').each(function() {
-        const iframe = this;
-        const script = `
-            document.addEventListener('keydown', function(e) {
-                if (e.ctrlKey && (e.key === 'p' || e.key === 's')) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                }
-            });
-            document.addEventListener('contextmenu', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-            });
-            window.onbeforeprint = function() { return false; };
-        `;
-        try {
-            const doc = iframe.contentDocument || iframe.contentWindow.document;
-            const scriptTag = doc.createElement('script');
-            scriptTag.textContent = script;
-            doc.head.appendChild(scriptTag);
-            console.log('Injected security script into PDF iframe');
-        } catch (e) {
-            console.log('Could not inject script into iframe: ', e);
+    // Block print attempts
+    window.onbeforeprint = function() {
+        console.log('Blocked print attempt');
+        alert('Printing is restricted on this page.');
+        $('.pdf-container').addClass('blurred');
+        return false;
+    };
+    Object.defineProperty(window, 'print', {
+        value: function() {
+            console.log('Print function overridden');
+            return false;
+        },
+        writable: false
+    });
+
+    // Blur on focus loss to deter screenshots (e.g., Snipping Tool)
+    let isBlurred = false;
+    $(window).on('blur', function() {
+        console.log('Window lost focus - possible screenshot attempt');
+        $('.pdf-container').addClass('blurred');
+        isBlurred = true;
+    });
+
+    // Unblur only on explicit user interaction
+    $('.pdf-container').on('click', function() {
+        if (isBlurred) {
+            console.log('User clicked to unblur');
+            $('.pdf-container').removeClass('blurred');
+            isBlurred = false;
         }
     });
+
+    // Attempt to detect dev tools
+    setInterval(() => {
+        if (window.outerWidth - window.innerWidth > 200 || window.outerHeight - window.innerHeight > 200) {
+            console.log('Possible dev tools open');
+            alert('Developer tools are restricted.');
+            $('.pdf-container').addClass('blurred');
+            isBlurred = true;
+        }
+    }, 1000);
 
     // Modal close on Esc key
     $(document).keydown(function(e) {

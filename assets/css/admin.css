@@ -11,6 +11,25 @@ body {
     display: flex;
     min-height: 100vh;
     line-height: 1.6;
+    transition: opacity 0.2s ease;
+}
+
+/* Disable text selection and dragging */
+body, canvas, .pdf-container {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Blur effect for PDF container */
+.pdf-container {
+    transition: filter 0.3s ease;
+}
+
+.pdf-container.blurred {
+    filter: blur(10px);
 }
 
 /* Sidebar */
@@ -171,7 +190,7 @@ body {
 .course-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 15px;
 }
 
 .course-card {
@@ -181,7 +200,7 @@ body {
     overflow: hidden;
     position: relative;
     width: 100%;
-    padding-top: 100%; /* Forces square aspect ratio */
+    padding-top: 80%;
     transition: transform 0.3s ease;
     cursor: pointer;
 }
@@ -204,20 +223,20 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     background: rgba(0, 0, 0, 0.7);
     color: #fff;
     text-align: center;
 }
 
 .course-info h3 {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 }
 
 .course-info p {
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .course-actions {
@@ -226,7 +245,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    gap: 10px;
+    gap: 8px;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -237,23 +256,23 @@ body {
 
 /* Buttons */
 .btn-action {
-    padding: 8px 16px;
+    padding: 6px 12px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 12px;
     color: #fff;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    min-width: 40px;
-    height: 40px;
+    min-width: 30px;
+    height: 30px;
 }
 
 .btn-action i {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .btn-action.add {
@@ -333,30 +352,31 @@ body {
 
 .pdf-wrapper {
     position: relative;
-    height: 80vh; /* Full viewport height minus padding */
-    overflow: hidden;
+    max-height: 80vh;
+    overflow-y: auto;
 }
 
-.embedded-pdf {
-    width: 100%;
-    height: 100%;
-    border: none;
-    background: #fff;
+.pdf-controls {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
-.pdf-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+.pdf-container {
     width: 100%;
-    height: 100%;
-    background: transparent;
-    z-index: 10;
+}
+
+.pdf-page {
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
 }
 
 .video-wrapper {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     background: #000;

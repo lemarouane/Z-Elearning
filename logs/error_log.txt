@@ -154,3 +154,79 @@
 [2025-03-31 20:17:41] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
 [2025-03-31 20:17:41] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
 [2025-03-31 20:19:34] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 01:09:56] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 01:28:04] Admin login page accessed with CSRF token: e3e53946fece29acf5552fe737bfb8e9ca3d83fe1ee6ea522bb9b06f57794bce
+[2025-04-01 01:28:06] Admin login page accessed with CSRF token: e3e53946fece29acf5552fe737bfb8e9ca3d83fe1ee6ea522bb9b06f57794bce
+[2025-04-01 01:28:06] Admin admin1 logged in successfully with ID 1
+[2025-04-01 01:28:06] Admin 1 accessed dashboard
+[2025-04-01 01:28:13] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 01:28:13] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 01:28:13] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 01:28:13] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 01:28:13] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 01:28:13] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 01:28:13] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 01:28:34] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 01:35:31] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 01:40:27] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 01:40:27] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 01:40:28] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 01:40:28] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 01:40:28] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 01:40:28] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 01:40:28] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 01:40:56] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 01:41:01] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 01:49:45] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 01:54:02] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 01:59:19] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:02:57] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:03:04] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:03:05] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:03:05] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:03:05] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:03:05] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:03:05] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:03:05] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:03:09] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:03:36] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:31:21] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:31:22] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:31:22] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:31:22] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:31:22] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:31:22] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:31:22] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:31:28] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:32:13] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 03:08:40] Admin login page accessed with CSRF token: 1f31f64e5b5c6104d0edff06c02b8c649d7886ce35e79aa1accc16d074907020
+[2025-04-01 03:08:42] Admin login page accessed with CSRF token: 1f31f64e5b5c6104d0edff06c02b8c649d7886ce35e79aa1accc16d074907020
+[2025-04-01 03:08:43] Admin login page accessed with CSRF token: 1f31f64e5b5c6104d0edff06c02b8c649d7886ce35e79aa1accc16d074907020
+[2025-04-01 03:08:43] Failed login attempt for username: admin - User not found.
+[2025-04-01 03:08:44] Admin login page accessed with CSRF token: 1f31f64e5b5c6104d0edff06c02b8c649d7886ce35e79aa1accc16d074907020
+[2025-04-01 03:08:44] Failed login attempt for username: admin - User not found.
+[2025-04-01 03:08:55] Admin login page accessed with CSRF token: 1f31f64e5b5c6104d0edff06c02b8c649d7886ce35e79aa1accc16d074907020
+[2025-04-01 03:08:56] Failed login attempt for username: admin - User not found.
+[2025-04-01 03:09:08] Admin login page accessed with CSRF token: e74fb1fa20e9bd1b50a8bcd077a32dbc69d631fdad00b07f1b6912835937fa3d
+[2025-04-01 03:09:08] CSRF token mismatch. Submitted: 1f31f64e5b5c6104d0edff06c02b8c649d7886ce35e79aa1accc16d074907020, Expected: e74fb1fa20e9bd1b50a8bcd077a32dbc69d631fdad00b07f1b6912835937fa3d
+[2025-04-01 03:09:23] Admin login page accessed with CSRF token: e74fb1fa20e9bd1b50a8bcd077a32dbc69d631fdad00b07f1b6912835937fa3d
+[2025-04-01 03:09:23] Admin admin1 logged in successfully with ID 1
+[2025-04-01 03:09:23] Admin 1 accessed dashboard
+[2025-04-01 03:09:39] Admin 1 accessed dashboard
+[2025-04-01 03:10:29] Admin 1 accessed dashboard
+[2025-04-01 03:10:42] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 03:10:43] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 03:10:43] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 03:10:43] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 03:10:43] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 03:10:43] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 03:10:43] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 03:10:46] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 03:17:12] PDF streaming failed: File not found or invalid - 1743470227_قرار فتح المباراة (1).pdf
+[2025-04-01 03:17:44] Admin 1 accessed dashboard
+[2025-04-01 03:17:47] Admin 1 accessed dashboard
+[2025-04-01 03:17:58] Admin 1 accessed dashboard
+[2025-04-01 13:20:48] Admin 1 accessed dashboard
+[2025-04-01 13:21:00] PDF streamed successfully: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 13:21:32] Admin 1 accessed dashboard
+[2025-04-01 13:25:17] L'administrateur 1 a accédé au tableau de bord

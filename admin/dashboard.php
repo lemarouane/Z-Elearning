@@ -3,26 +3,26 @@ require_once '../includes/config.php';
 check_login('admin');
 
 $admin_id = $_SESSION['admin_id'];
-log_error("Admin $admin_id accessed dashboard");
+log_error("L'administrateur $admin_id a accédé au tableau de bord");
 
-// Fetch stats
+// Récupérer les statistiques
 $total_students = $conn->query("SELECT COUNT(*) FROM students")->fetch_row()[0];
 $validated_students = $conn->query("SELECT COUNT(*) FROM students WHERE is_validated = 1")->fetch_row()[0];
 $pending_students = $conn->query("SELECT COUNT(*) FROM students WHERE is_validated = 0")->fetch_row()[0];
 $total_courses = $conn->query("SELECT COUNT(*) FROM courses")->fetch_row()[0];
 $activity_count = $conn->query("SELECT COUNT(*) FROM activity_logs WHERE admin_id = $admin_id")->fetch_row()[0];
 
-// Fetch recent students
+// Récupérer les étudiants récents
 $students_result = $conn->query("SELECT id, name, email, is_validated, created_at FROM students ORDER BY created_at DESC LIMIT 5");
 
-// Fetch recent courses
+// Récupérer les cours récents
 $courses_result = $conn->query("SELECT c.id, c.title, s.name AS subject, l.name AS level, c.created_at 
                                 FROM courses c 
                                 JOIN subjects s ON c.subject_id = s.id 
                                 JOIN levels l ON c.level_id = l.id 
                                 ORDER BY c.created_at DESC LIMIT 5");
 
-// Fetch subjects for chart
+// Récupérer les sujets pour le graphique
 $subjects_result = $conn->query("SELECT s.name, COUNT(c.id) as course_count 
                                  FROM subjects s 
                                  LEFT JOIN courses c ON s.id = c.subject_id 
@@ -34,11 +34,11 @@ while ($row = $subjects_result->fetch_assoc()) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard - Zouhair E-learning</title>
+    <title>Tableau de bord administrateur - Zouhair E-learning</title>
     <link rel="stylesheet" href="../assets/css/admin.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -48,24 +48,24 @@ while ($row = $subjects_result->fetch_assoc()) {
 <body>
     <?php include '../includes/header.php'; ?>
     <main class="dashboard">
-        <h1>Admin Dashboard</h1>
+        <h1>Tableau de bord administrateur</h1>
         <section class="stats">
-            <div class="stat-card"><h3>Total Students</h3><p><?php echo $total_students; ?></p></div>
-            <div class="stat-card"><h3>Validated Students</h3><p><?php echo $validated_students; ?></p></div>
-            <div class="stat-card"><h3>Pending Students</h3><p><?php echo $pending_students; ?></p></div>
-            <div class="stat-card"><h3>Total Courses</h3><p><?php echo $total_courses; ?></p></div>
-            <div class="stat-card"><h3>Your Activities</h3><p><?php echo $activity_count; ?></p></div>
+            <div class="stat-card"><h3>Total des étudiants</h3><p><?php echo $total_students; ?></p></div>
+            <div class="stat-card"><h3>Étudiants validés</h3><p><?php echo $validated_students; ?></p></div>
+            <div class="stat-card"><h3>Étudiants en attente</h3><p><?php echo $pending_students; ?></p></div>
+            <div class="stat-card"><h3>Total des cours</h3><p><?php echo $total_courses; ?></p></div>
+            <div class="stat-card"><h3>Vos activités</h3><p><?php echo $activity_count; ?></p></div>
         </section>
         <section class="charts">
-            <div class="chart-container"><h2>Student Status</h2><canvas id="studentChart"></canvas></div>
-            <div class="chart-container"><h2>Courses by Subject</h2><canvas id="subjectChart" height="200"></canvas></div>
+            <div class="chart-container"><h2>Statut des étudiants</h2><canvas id="studentChart"></canvas></div>
+            <div class="chart-container"><h2>Cours par sujet</h2><canvas id="subjectChart" height="200"></canvas></div>
         </section>
         <section class="tables">
             <div class="table-container">
-                <h2>Recent Students</h2>
+                <h2>Étudiants récents</h2>
                 <table id="studentsTable" class="display">
                     <thead>
-                        <tr><th>ID</th><th>Name</th><th>Email</th><th>Validated</th><th>Registered</th><th>Actions</th></tr>
+                        <tr><th>ID</th><th>Nom</th><th>Email</th><th>Validé</th><th>Inscrit</th><th>Actions</th></tr>
                     </thead>
                     <tbody>
                         <?php while ($row = $students_result->fetch_assoc()): ?>
@@ -73,7 +73,7 @@ while ($row = $subjects_result->fetch_assoc()) {
                                 <td><?php echo $row['id']; ?></td>
                                 <td><?php echo htmlspecialchars($row['name']); ?></td>
                                 <td><?php echo htmlspecialchars($row['email']); ?></td>
-                                <td><?php echo $row['is_validated'] ? 'Yes' : 'No'; ?></td>
+                                <td><?php echo $row['is_validated'] ? 'Oui' : 'Non'; ?></td>
                                 <td><?php echo $row['created_at']; ?></td>
                                 <td>
                                     <a href="view_student.php?id=<?php echo $row['id']; ?>" class="btn-action view"><i class="fas fa-eye"></i></a>
@@ -81,7 +81,7 @@ while ($row = $subjects_result->fetch_assoc()) {
                                     <form method="POST" action="manage_students.php" class="action-form" style="display:inline;">
                                         <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
                                         <input type="hidden" name="student_id" value="<?php echo $row['id']; ?>">
-                                        <button type="submit" name="delete" class="btn-action delete" onclick="return confirm('Are you sure?');"><i class="fas fa-trash"></i></button>
+                                        <button type="submit" name="delete" class="btn-action delete" onclick="return confirm('Êtes-vous sûr ?');"><i class="fas fa-trash"></i></button>
                                     </form>
                                 </td>
                             </tr>
@@ -90,10 +90,10 @@ while ($row = $subjects_result->fetch_assoc()) {
                 </table>
             </div>
             <div class="table-container">
-                <h2>Recent Courses</h2>
+                <h2>Cours récents</h2>
                 <table id="coursesTable" class="display">
                     <thead>
-                        <tr><th>ID</th><th>Title</th><th>Subject</th><th>Level</th><th>Created</th><th>Actions</th></tr>
+                        <tr><th>ID</th><th>Titre</th><th>Sujet</th><th>Niveau</th><th>Créé</th><th>Actions</th></tr>
                     </thead>
                     <tbody>
                         <?php while ($row = $courses_result->fetch_assoc()): ?>
@@ -109,7 +109,7 @@ while ($row = $subjects_result->fetch_assoc()) {
                                     <form method="POST" action="manage_courses.php" class="action-form" style="display:inline;">
                                         <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
                                         <input type="hidden" name="course_id" value="<?php echo $row['id']; ?>">
-                                        <button type="submit" name="delete" class="btn-action delete" onclick="return confirm('Are you sure?');"><i class="fas fa-trash"></i></button>
+                                        <button type="submit" name="delete" class="btn-action delete" onclick="return confirm('Êtes-vous sûr ?');"><i class="fas fa-trash"></i></button>
                                     </form>
                                 </td>
                             </tr>
@@ -125,8 +125,8 @@ while ($row = $subjects_result->fetch_assoc()) {
         new Chart(studentCtx, {
             type: 'bar',
             data: {
-                labels: ['Validated', 'Pending'],
-                datasets: [{ label: 'Students', data: [<?php echo $validated_students; ?>, <?php echo $pending_students; ?>], backgroundColor: ['#3498db', '#e74c3c'], borderWidth: 1 }]
+                labels: ['Validés', 'En attente'],
+                datasets: [{ label: 'Étudiants', data: [<?php echo $validated_students; ?>, <?php echo $pending_students; ?>], backgroundColor: ['#3498db', '#e74c3c'], borderWidth: 1 }]
             },
             options: { scales: { y: { beginAtZero: true } }, plugins: { legend: { display: false } } }
         });

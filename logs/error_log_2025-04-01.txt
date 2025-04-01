@@ -1,0 +1,17 @@
+[2025-04-01 02:15:48] Generated token: c0aa4ee776906b4fdd1325c3784591e7 for path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:20:09] Generated token: 97975f126d2149ace2c2a389035cb03e for path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:20:11] Generated token: cd85138eaa281aa303442bdce9113e18 for path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:20:27] Admin login page accessed with CSRF token: 13329e98a716b773d7631e5e0d2f54a1b4ff1534fd03ad2cd315b5567e2fdfc2
+[2025-04-01 02:20:28] Admin login page accessed with CSRF token: 13329e98a716b773d7631e5e0d2f54a1b4ff1534fd03ad2cd315b5567e2fdfc2
+[2025-04-01 02:20:28] Admin admin1 logged in successfully with ID 1
+[2025-04-01 02:20:28] Admin 1 accessed dashboard
+[2025-04-01 02:20:34] Generated token: a4cd38bd02227556632cd8303e3961e3 for path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:23:16] Generated token: 71aebfad4b989025defdabd460919c2f for path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:23:18] Generated token: 57c0bd6c56043200862ad4edcc82a093 for path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:23:18] Generated token: 0f0110e7ab7c97915d6a9c43d1059f6f for path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:23:19] Generated token: 19be2d2f2991df040011de3214e052dc for path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:23:19] Generated token: bef930a806d98998114d4ba57eb080ba for path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:26:50] Token: 7e76f9524a11e5959d18e1a3eabf4090 | Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:26:54] Token: 40215be7dcab77803f5d10eb012f9a1e | Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:30:10] Token: 118b27531b2757c5656dcafc0c16cc05 | Path: uploads/pdfs/قرار فتح المباراة.pdf
+[2025-04-01 02:30:11] Token: 1ab3d8a7a7d2779c23ace9a96ae3ee94 | Path: uploads/pdfs/قرار فتح المباراة.pdf
