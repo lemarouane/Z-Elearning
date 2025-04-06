@@ -23,7 +23,11 @@ $role = isset($_SESSION['admin_id']) ? 'admin' : (isset($_SESSION['student_id'])
                 <?php if ($role === 'admin'): ?>
                     <li><a href="../admin/dashboard.php"><i class="fas fa-tachometer-alt"></i> <span>Tableau de bord</span></a></li>
                     <li><a href="../admin/manage_students.php"><i class="fas fa-users"></i> <span>Gérer les étudiants</span></a></li>
+                    <!-- Inside <nav class="sidebar-nav"> -->
+<li><a href="../admin/manage_levels.php"><i class="fas fa-layer-group"></i> <span>Gérer les niveaux</span></a></li>
+<!-- Add this after "Gérer les cours" -->
                     <li><a href="../admin/manage_courses.php"><i class="fas fa-book"></i> <span>Gérer les cours</span></a></li>
+                    
                     <li><a href="../admin/add_course.php"><i class="fas fa-plus-circle"></i> <span>Ajouter un cours</span></a></li>
                     <li><a href="../admin/activity_logs.php"><i class="fas fa-history"></i> <span>Journal d'activités</span></a></li>
                     <li><a href="../logout.php"><i class="fas fa-sign-out-alt"></i> <span>Déconnexion</span></a></li>

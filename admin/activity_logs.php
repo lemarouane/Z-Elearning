@@ -3,7 +3,7 @@ require_once '../includes/config.php';
 check_login('admin');
 
 $admin_id = $_SESSION['admin_id'];
-$logs_result = $conn->query("SELECT action, action_time, details FROM activity_logs WHERE admin_id = $admin_id ORDER BY action_time DESC");
+$logs = $conn->query("SELECT user_id, user_role, action, details, action_time FROM activity_logs WHERE user_role = 'admin' AND user_id = $admin_id ORDER BY action_time DESC");
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +11,7 @@ $logs_result = $conn->query("SELECT action, action_time, details FROM activity_l
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activity Logs - Zouhair E-learning</title>
+    <title>Activity Logs - Zouhair E-Learning</title>
     <link rel="stylesheet" href="../assets/css/admin.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
@@ -25,15 +25,15 @@ $logs_result = $conn->query("SELECT action, action_time, details FROM activity_l
             <div class="table-container">
                 <h2>Your Activities</h2>
                 <table id="logsTable" class="display">
-                    <thead>
-                        <tr><th>Action</th><th>Time</th><th>Details</th></tr>
-                    </thead>
+                    <thead><tr><th>User ID</th><th>Role</th><th>Action</th><th>Details</th><th>Time</th></tr></thead>
                     <tbody>
-                        <?php while ($row = $logs_result->fetch_assoc()): ?>
+                        <?php while ($log = $logs->fetch_assoc()): ?>
                             <tr>
-                                <td><?php echo htmlspecialchars($row['action']); ?></td>
-                                <td><?php echo $row['action_time']; ?></td>
-                                <td><?php echo htmlspecialchars($row['details'] ?? 'N/A'); ?></td>
+                                <td><?php echo $log['user_id']; ?></td>
+                                <td><?php echo htmlspecialchars($log['user_role']); ?></td>
+                                <td><?php echo htmlspecialchars($log['action']); ?></td>
+                                <td><?php echo htmlspecialchars($log['details'] ?? 'N/A'); ?></td>
+                                <td><?php echo $log['action_time']; ?></td>
                             </tr>
                         <?php endwhile; ?>
                     </tbody>
@@ -46,10 +46,8 @@ $logs_result = $conn->query("SELECT action, action_time, details FROM activity_l
         $(document).ready(function() {
             $('#logsTable').DataTable({
                 pageLength: 10,
-                lengthChange: false,
-                searching: true,
-                ordering: true,
-                info: true
+                order: [[4, 'desc']],
+                language: { search: "Filter logs:" }
             });
         });
     </script>

@@ -231,3 +231,93 @@
 [2025-04-01 13:21:32] Admin 1 accessed dashboard
 [2025-04-01 13:25:17] L'administrateur 1 a accédé au tableau de bord
 [2025-04-01 13:31:04] L'administrateur 1 a accédé au tableau de bord
+[2025-04-06 00:39:09] Admin login page accessed with CSRF token: 3c5712969fe20861aad4296d295118571b52b078ec72572a57ef18fbbfba1b53
+[2025-04-06 00:39:17] Admin login page accessed with CSRF token: 3c5712969fe20861aad4296d295118571b52b078ec72572a57ef18fbbfba1b53
+[2025-04-06 00:39:17] Admin admin logged in successfully with ID 1
+[2025-04-06 00:39:17] L'administrateur 1 a accédé au tableau de bord
+[2025-04-06 00:39:35] L'administrateur 1 a accédé au tableau de bord
+[2025-04-06 17:30:02] L'administrateur 1 a accédé au tableau de bord
+[2025-04-06 17:30:07] L'administrateur 1 a accédé au tableau de bord
+[2025-04-06 17:30:24] L'administrateur 1 a accédé au tableau de bord
+[2025-04-06 17:30:28] L'administrateur 1 a accédé au tableau de bord
+[2025-04-06 17:30:34] Admin login page accessed with CSRF token: 5ec3e3d16066f92a222969ada952fa9cfa91bd4eb1173c5528a799d826ae1f56
+[2025-04-06 17:30:44] Admin login page accessed with CSRF token: 5ec3e3d16066f92a222969ada952fa9cfa91bd4eb1173c5528a799d826ae1f56
+[2025-04-06 17:30:44] Admin admin logged in successfully with ID 1
+[2025-04-06 17:30:44] L'administrateur 1 a accédé au tableau de bord
+[2025-04-06 17:54:04] PDF streamed successfully: uploads/pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 17:54:04] PDF streamed successfully: uploads/pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 17:54:04] PDF streamed successfully: uploads/pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 17:54:04] PDF streamed successfully: uploads/pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 17:54:39] PDF streamed successfully: uploads/pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 17:59:35] PDF streamed successfully: uploads/pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 17:59:35] PDF streamed successfully: uploads/pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 17:59:35] PDF streamed successfully: uploads/pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 17:59:35] PDF streamed successfully: uploads/pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 17:59:40] PDF streamed successfully: uploads/pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 17:59:40] PDF streamed successfully: uploads/pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 17:59:41] PDF streamed successfully: uploads/pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 17:59:42] PDF streamed successfully: uploads/pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 17:59:42] PDF streamed successfully: uploads/pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 17:59:42] PDF streamed successfully: uploads/pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 17:59:42] PDF streamed successfully: uploads/pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 17:59:42] PDF streamed successfully: uploads/pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 17:59:43] PDF streamed successfully: uploads/pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 17:59:43] PDF streamed successfully: uploads/pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 17:59:43] PDF streamed successfully: uploads/pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 17:59:43] PDF streamed successfully: uploads/pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 17:59:43] PDF streamed successfully: uploads/pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 17:59:44] PDF streamed successfully: uploads/pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 17:59:44] PDF streamed successfully: uploads/pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 17:59:44] PDF streamed successfully: uploads/pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 17:59:44] PDF streamed successfully: uploads/pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 17:59:45] PDF streamed successfully: uploads/pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:11] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:14] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:14] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:15] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:16] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:16] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:16] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:16] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:16] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:17] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:17] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:17] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:17] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:18] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:18] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:18] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:18] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:18] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:19] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:19] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:29] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:31] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:35] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:37] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:37] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:38] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:38] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:38] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:38] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:01:52] PDF streaming failed: File not found or invalid - pdfs/1743954493_1.pdf - Admin ID: 1
+[2025-04-06 18:02:18] PDF streaming failed: File not found or invalid - pdfs/1743955334_oncf-voyages-ismail haddad.pdf - Admin ID: 1
+[2025-04-06 18:04:01] PDF streaming failed: File not found or invalid - pdfs/1743955334_oncf-voyages-ismail haddad.pdf - Admin ID: 1
+[2025-04-06 18:04:02] PDF streaming failed: File not found or invalid - pdfs/1743955334_oncf-voyages-ismail haddad.pdf - Admin ID: 1
+[2025-04-06 18:04:04] PDF streaming failed: File not found or invalid - pdfs/1743955334_oncf-voyages-ismail haddad.pdf
+[2025-04-06 18:04:04] PDF streaming failed: File not found or invalid - pdfs/1743955334_oncf-voyages-ismail haddad.pdf
+[2025-04-06 18:04:05] PDF streaming failed: File not found or invalid - pdfs/1743955334_oncf-voyages-ismail haddad.pdf
+[2025-04-06 18:04:05] PDF streaming failed: File not found or invalid - pdfs/1743955334_oncf-voyages-ismail haddad.pdf
+[2025-04-06 18:04:05] PDF streaming failed: File not found or invalid - pdfs/1743955334_oncf-voyages-ismail haddad.pdf
+[2025-04-06 18:04:05] PDF streaming failed: File not found or invalid - pdfs/1743955334_oncf-voyages-ismail haddad.pdf
+[2025-04-06 18:04:05] PDF streaming failed: File not found or invalid - pdfs/1743955334_oncf-voyages-ismail haddad.pdf
+[2025-04-06 18:04:06] PDF streaming failed: File not found or invalid - pdfs/1743955334_oncf-voyages-ismail haddad.pdf
+[2025-04-06 18:04:06] PDF streaming failed: File not found or invalid - pdfs/1743955334_oncf-voyages-ismail haddad.pdf
+[2025-04-06 18:04:06] PDF streaming failed: File not found or invalid - pdfs/1743955334_oncf-voyages-ismail haddad.pdf
+[2025-04-06 18:04:06] PDF streaming failed: File not found or invalid - pdfs/1743955334_oncf-voyages-ismail haddad.pdf
+[2025-04-06 18:04:06] PDF streaming failed: File not found or invalid - pdfs/1743955334_oncf-voyages-ismail haddad.pdf
+[2025-04-06 18:04:07] PDF streaming failed: File not found or invalid - pdfs/1743955334_oncf-voyages-ismail haddad.pdf
+[2025-04-06 18:04:07] PDF streaming failed: File not found or invalid - pdfs/1743955334_oncf-voyages-ismail haddad.pdf
+[2025-04-06 18:04:07] PDF streaming failed: File not found or invalid - pdfs/1743955334_oncf-voyages-ismail haddad.pdf
+[2025-04-06 18:04:10] PDF streaming failed: File not found or invalid - pdfs/1743955334_oncf-voyages-ismail haddad.pdf
+[2025-04-06 18:37:42] PDF streaming failed: File not found or invalid - uploads/pdfs/1743954361_AG Fitness Website Development Report.pdf - Admin ID: 1

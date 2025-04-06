@@ -2,41 +2,41 @@
 require_once '../includes/config.php';
 check_login('admin');
 
-$student_id = isset($_GET['id']) ? sanitize_input($_GET['id']) : null;
-if (!$student_id) {
-    header("Location: manage_students.php");
-    exit();
-}
+$admin_id = $_SESSION['admin_id'];
+$student_id = $_GET['id'] ?? 0;
+$message = $error = '';
 
-$student = $conn->query("SELECT name, email, phone FROM students WHERE id = $student_id")->fetch_assoc();
+$stmt = $conn->prepare("SELECT full_name, email, phone, is_validated, device_token FROM students WHERE id = ?");
+$stmt->bind_param("i", $student_id);
+$stmt->execute();
+$student = $stmt->get_result()->fetch_assoc();
+$stmt->close();
+
 if (!$student) {
     header("Location: manage_students.php");
     exit();
 }
 
-$courses_result = $conn->query("SELECT id, title FROM courses");
-$assigned_courses = $conn->query("SELECT course_id FROM student_courses WHERE student_id = $student_id")->fetch_all(MYSQLI_ASSOC);
-$assigned_ids = array_column($assigned_courses, 'course_id');
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['csrf_token']) && $_POST['csrf_token'] === $_SESSION['csrf_token']) {
-    $name = sanitize_input($_POST['name']);
+    $full_name = sanitize_input($_POST['full_name']);
     $email = sanitize_input($_POST['email']);
     $phone = sanitize_input($_POST['phone']);
-    $new_courses = isset($_POST['courses']) ? array_map('sanitize_input', $_POST['courses']) : [];
+    $is_validated = isset($_POST['is_validated']) ? 1 : 0;
+    $device_token = sanitize_input($_POST['device_token']);
 
-    $stmt = $conn->prepare("UPDATE students SET name = ?, email = ?, phone = ? WHERE id = ?");
-    $stmt->bind_param("sssi", $name, $email, $phone, $student_id);
-    $stmt->execute();
-    $stmt->close();
-
-    $conn->query("DELETE FROM student_courses WHERE student_id = $student_id");
-    foreach ($new_courses as $course_id) {
-        $conn->query("INSERT INTO student_courses (student_id, course_id) VALUES ($student_id, $course_id)");
+    $stmt = $conn->prepare("UPDATE students SET full_name = ?, email = ?, phone = ?, is_validated = ?, device_token = ? WHERE id = ?");
+    $stmt->bind_param("sssisi", $full_name, $email, $phone, $is_validated, $device_token, $student_id);
+    if ($stmt->execute()) {
+        $conn->query("INSERT INTO activity_logs (user_id, user_role, action, details) VALUES ($admin_id, 'admin', 'Edited student', 'Student ID: $student_id')");
+        if ($is_validated && !$student['is_validated']) {
+            $conn->query("INSERT INTO notifications (user_id, user_role, message) VALUES ($student_id, 'student', 'Your account has been validated!')");
+        }
+        $message = "Student updated successfully.";
+        regenerate_csrf_token();
+    } else {
+        $error = "Failed to update student: " . $conn->error;
     }
-
-    $conn->query("INSERT INTO activity_logs (admin_id, action, details) VALUES ({$_SESSION['admin_id']}, 'Edited student', 'Student ID: $student_id')");
-    header("Location: view_student.php?id=$student_id");
-    exit();
+    $stmt->close();
 }
 ?>
 
@@ -45,38 +45,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['csrf_token']) && $_PO
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Student - Zouhair E-learning</title>
+    <title>Edit Student - Zouhair E-Learning</title>
     <link rel="stylesheet" href="../assets/css/admin.css">
 </head>
 <body>
     <?php include '../includes/header.php'; ?>
     <main class="dashboard">
-        <h1>Edit Student: <?php echo htmlspecialchars($student['name']); ?></h1>
+        <h1>Edit Student</h1>
+        <?php if ($message): ?><p class="success"><?php echo htmlspecialchars($message); ?></p><?php endif; ?>
+        <?php if ($error): ?><p class="error"><?php echo htmlspecialchars($error); ?></p><?php endif; ?>
         <form method="POST" class="course-form">
             <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
             <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" value="<?php echo htmlspecialchars($student['name']); ?>" required>
+                <label for="full_name">Full Name</label>
+                <input type="text" id="full_name" name="full_name" value="<?php echo htmlspecialchars($student['full_name']); ?>" required>
             </div>
             <div class="form-group">
-                <label for="email">Email:</label>
+                <label for="email">Email</label>
                 <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($student['email']); ?>" required>
             </div>
             <div class="form-group">
-                <label for="phone">Phone:</label>
+                <label for="phone">Phone</label>
                 <input type="text" id="phone" name="phone" value="<?php echo htmlspecialchars($student['phone']); ?>" required>
             </div>
             <div class="form-group">
-                <label>Assigned Courses:</label>
-                <?php while ($row = $courses_result->fetch_assoc()): ?>
-                    <div>
-                        <input type="checkbox" name="courses[]" value="<?php echo $row['id']; ?>" 
-                               <?php echo in_array($row['id'], $assigned_ids) ? 'checked' : ''; ?>>
-                        <?php echo htmlspecialchars($row['title']); ?>
-                    </div>
-                <?php endwhile; ?>
+                <label for="device_token">Device Token</label>
+                <input type="text" id="device_token" name="device_token" value="<?php echo htmlspecialchars($student['device_token']); ?>">
             </div>
-            <button type="submit" class="btn-action validate">Save Changes</button>
+            <div class="form-group">
+                <label for="is_validated">Validated</label>
+                <input type="checkbox" id="is_validated" name="is_validated" <?php echo $student['is_validated'] ? 'checked' : ''; ?>>
+            </div>
+            <button type="submit" class="btn-action edit">Update Student</button>
+            <a href="manage_students.php" class="btn-action delete">Cancel</a>
         </form>
     </main>
     <?php include '../includes/footer.php'; ?>

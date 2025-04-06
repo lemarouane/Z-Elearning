@@ -57,50 +57,99 @@ if ($course['content_type'] === 'video') {
                     <?php if ($course['content_type'] === 'pdf'): ?>
                         <div class="pdf-wrapper">
                             <div class="pdf-controls">
-                                <button id="zoomIn" class="btn-action"><i class="fas fa-search-plus"></i></button>
-                                <button id="zoomOut" class="btn-action"><i class="fas fa-search-minus"></i></button>
+                                <button id="zoomIn" class="btn-action"><i class="fas fa-search-plus"></i> Zoom In</button>
+                                <button id="zoomOut" class="btn-action"><i class="fas fa-search-minus"></i> Zoom Out</button>
+                                <button id="fitWidth" class="btn-action"><i class="fas fa-arrows-alt-h"></i> Fit Width</button>
+                                <span id="pageInfo">Pages: <span id="pageCount">0</span></span>
                             </div>
-                            <div id="pdfContainer" class="pdf-container"></div>
+                            <div id="pdfContainer" class="pdf-container">
+                                <!-- PDF pages will be rendered here -->
+                            </div>
                             <script type="module">
                                 const url = 'stream_pdf.php?file=<?php echo urlencode($course['content_path']); ?>';
                                 let pdfDoc = null;
-                                let scale = 1.5;
+                                let scale = 1.2;
+                                const pdfContainer = document.getElementById('pdfContainer');
+                                const pageCount = document.getElementById('pageCount');
+                                
+                                // Calculate the best scale to fit the width
+                                function calculateFitToWidthScale(page) {
+                                    const containerWidth = pdfContainer.clientWidth - 20; // -20 for padding
+                                    const viewportOriginal = page.getViewport({ scale: 1.0 });
+                                    return containerWidth / viewportOriginal.width;
+                                }
 
+                                // Render all pages of the PDF
                                 async function renderAllPages() {
-                                    const pdfContainer = document.getElementById('pdfContainer');
-                                    pdfContainer.innerHTML = ''; // Clear previous content
-                                    for (let num = 1; num <= pdfDoc.numPages; num++) {
-                                        const page = await pdfDoc.getPage(num);
+                                    pdfContainer.innerHTML = ''; // Clear container
+                                    
+                                    for (let pageNum = 1; pageNum <= pdfDoc.numPages; pageNum++) {
+                                        const page = await pdfDoc.getPage(pageNum);
                                         const viewport = page.getViewport({ scale });
+                                        
+                                        // Create page container
+                                        const pageContainer = document.createElement('div');
+                                        pageContainer.className = 'pdf-page-container';
+                                        pageContainer.id = `page-${pageNum}`;
+                                        
+                                        // Create page number label
+                                        const pageLabel = document.createElement('div');
+                                        pageLabel.className = 'page-number';
+                                        pageLabel.textContent = `Page ${pageNum}`;
+                                        pageContainer.appendChild(pageLabel);
+                                        
+                                        // Create canvas for this page
                                         const canvas = document.createElement('canvas');
                                         canvas.className = 'pdf-page';
-                                        pdfContainer.appendChild(canvas);
+                                        pageContainer.appendChild(canvas);
+                                        pdfContainer.appendChild(pageContainer);
+                                        
                                         const ctx = canvas.getContext('2d');
                                         canvas.height = viewport.height;
                                         canvas.width = viewport.width;
-                                        const renderTask = page.render({ canvasContext: ctx, viewport });
-                                        await renderTask.promise;
+                                        
+                                        // Render the page
+                                        await page.render({
+                                            canvasContext: ctx,
+                                            viewport: viewport
+                                        }).promise;
                                     }
-                                    console.log('All pages rendered at scale:', scale);
                                 }
-
-                                window.pdfjsLib.getDocument(url).promise.then(pdf => {
-                                    pdfDoc = pdf;
-                                    renderAllPages();
-                                }).catch(err => console.error('Error loading PDF:', err));
-
+                                
+                                // Initialize PDF.js
+                                window.pdfjsLib.getDocument(url).promise
+                                    .then(async (pdf) => {
+                                        pdfDoc = pdf;
+                                        pageCount.textContent = pdfDoc.numPages;
+                                        
+                                        // Get first page to calculate initial scale for fit-to-width
+                                        const firstPage = await pdfDoc.getPage(1);
+                                        scale = calculateFitToWidthScale(firstPage);
+                                        
+                                        renderAllPages();
+                                    })
+                                    .catch(error => {
+                                        console.error('Error loading PDF:', error);
+                                        pdfContainer.innerHTML = `<div class="error-message">Failed to load PDF: ${error.message}</div>`;
+                                    });
+                                
+                                // Event listeners for zoom controls
                                 document.getElementById('zoomIn').addEventListener('click', () => {
-                                    scale += 0.25;
-                                    console.log('Zoom in clicked, new scale:', scale);
+                                    scale += 0.2;
                                     renderAllPages();
                                 });
-
+                                
                                 document.getElementById('zoomOut').addEventListener('click', () => {
-                                    if (scale > 0.25) {
-                                        scale -= 0.25;
-                                        console.log('Zoom out clicked, new scale:', scale);
+                                    if (scale > 0.5) {
+                                        scale -= 0.2;
                                         renderAllPages();
                                     }
+                                });
+                                
+                                document.getElementById('fitWidth').addEventListener('click', async () => {
+                                    const firstPage = await pdfDoc.getPage(1);
+                                    scale = calculateFitToWidthScale(firstPage);
+                                    renderAllPages();
                                 });
                             </script>
                         </div>
