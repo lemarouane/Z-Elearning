@@ -50,7 +50,7 @@ $courses = $conn->query($courses_query);
                 <h2>Your Recent Courses</h2>
                 <?php if ($courses->num_rows === 0): ?>
                     <p>No courses assigned yet.</p>
-                <?php else: ?>
+                <?php else: ?>   
                     <div class="course-grid">
                         <?php while ($course = $courses->fetch_assoc()): ?>
                             <div class="course-card">
