@@ -321,3 +321,5 @@
 [2025-04-06 18:04:07] PDF streaming failed: File not found or invalid - pdfs/1743955334_oncf-voyages-ismail haddad.pdf
 [2025-04-06 18:04:10] PDF streaming failed: File not found or invalid - pdfs/1743955334_oncf-voyages-ismail haddad.pdf
 [2025-04-06 18:37:42] PDF streaming failed: File not found or invalid - uploads/pdfs/1743954361_AG Fitness Website Development Report.pdf - Admin ID: 1
+[2025-04-07 03:41:09] PDF streaming failed: File not found or invalid - pdfs/algebra_basics.pdf - Admin ID: 1
+[2025-04-07 03:41:12] PDF streaming failed: File not found or invalid - pdfs/algebra_basics.pdf - Admin ID: 1

@@ -46,7 +46,7 @@ $notifs = $conn->query("SELECT id, message, created_at FROM notifications WHERE 
         <section class="stats">
             <div class="stat-card"><h3>Total Students</h3><p><?php echo $total_students; ?></p></div>
             <div class="stat-card"><h3>Validated</h3><p><?php echo $validated_students; ?></p></div>
-            <div class="stat-card"><h3>Pending</h3><p><?php echo $pending_students; ?></p></div>
+            <div class="stat-card"><h3>Pending</h3><p><a href="validate_student.php"><?php echo $pending_students; ?></a></p></div>
             <div class="stat-card"><h3>Total Courses</h3><p><?php echo $total_courses; ?></p></div>
             <div class="stat-card"><h3>Total Levels</h3><p><a href="manage_levels.php"><?php echo $total_levels; ?></a></p></div>
             <div class="stat-card"><h3>New Notifications</h3><p><?php echo $notifications; ?></p></div>
@@ -79,6 +79,9 @@ $notifs = $conn->query("SELECT id, message, created_at FROM notifications WHERE 
                                 <td>
                                     <a href="view_student.php?id=<?php echo $student['id']; ?>" class="btn-action view"><i class="fas fa-eye"></i></a>
                                     <a href="edit_student.php?id=<?php echo $student['id']; ?>" class="btn-action edit"><i class="fas fa-edit"></i></a>
+                                    <?php if (!$student['is_validated']): ?>
+                                        <a href="validate_student.php?id=<?php echo $student['id']; ?>" class="btn-action validate"><i class="fas fa-check"></i></a>
+                                    <?php endif; ?>
                                 </td>
                             </tr>
                         <?php endwhile; ?>
